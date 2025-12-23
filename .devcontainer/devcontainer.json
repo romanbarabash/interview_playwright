@@ -1,0 +1,12 @@
+{
+  "name": "Playwright + TS (Interview)",
+  "image": "mcr.microsoft.com/playwright:v1.57.0-noble",
+  "postCreateCommand": "npm ci",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-playwright.playwright"
+      ]
+    }
+  }
+}
