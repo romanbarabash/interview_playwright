@@ -14,8 +14,8 @@ export class DisabledInputPage extends BasePage {
         super(page);
         this.page = page;
 
-        this.playgroundInputField = this.page.locator("#blueField");
-        this.enableButton = this.page.locator("#enableButton");
+        this.playgroundInputField = this.page.locator("#inputField");
+        this.enableButton = this.page.locator("#blueButton");
     }
 
     async openPage() {
