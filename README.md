@@ -1,22 +1,67 @@
-Here are the steps the other person should do to run your Playwright tests from this repo (Windows-friendly):
+# Playwright Demo (interview_playwright)
 
-Prereqs
+This repo contains end-to-end tests written with [Playwright Test](https://playwright.dev/docs/test-intro).
 
-Install Node.js (LTS is fine). Verify: node -v and npm -v
-Get the code
+## Prerequisites
 
-git clone <repo-url>
-cd interview_playwright
-Install dependencies
+- **Node.js** (LTS recommended)
+- **npm** (comes with Node)
 
+Verify:
+
+```bash
+node -v
+npm -v
+```
+
+## Setup
+
+From the repo root:
+
+```bash
 npm install
-Install Playwright browsers (required on a new machine)
+```
 
+Install Playwright browsers (required on a new machine):
+
+```bash
 npx playwright install
-Optional (more “it just works” on fresh Windows machines): npx playwright install --with-deps
-Run the tests
+```
 
+Optional (useful on fresh Windows machines if you hit missing system dependencies):
+
+```bash
+npx playwright install --with-deps
+```
+
+## Run tests
+
+Run all tests:
+
+```bash
 npx playwright test
-View the HTML report
+```
 
-Your config is set to open it automatically; manually: npx playwright show-report
+Run a specific test file:
+
+```bash
+npx playwright test tests/interviewTest.spec.ts
+```
+
+## HTML Report
+
+The HTML report is configured to **open automatically** after each run.
+
+To open the last report manually:
+
+```bash
+npx playwright show-report
+```
+
+## Troubleshooting
+
+- If `npx` is not recognized:
+  - Ensure Node.js is installed
+  - Ensure you are running commands from the repo root (the folder containing `package.json`)
+- If browsers are missing:
+  - Run `npx playwright install`
